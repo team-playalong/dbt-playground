@@ -1,6 +1,6 @@
-
+.vscode
 target/
 dbt_packages/
 logs/
-
+*.log
 .venv/

@@ -34,7 +34,15 @@ models:
     src:
       +materialized: view
 
+  ## elementary models will be created in the schema '<your_schema>_elementary'
+  ## see docs: https://docs.elementary-data.com/
+  elementary:
+    +schema: 'elementary'
+
 # https://github.com/get-select/dbt-snowflake-monitoring
 query-comment:
   comment: '{{ dbt_snowflake_monitoring.get_query_comment(node) }}'
   append: true # Snowflake removes prefixed comments.
+
+on-run-end:
+  - '{{ dbt_artifacts.upload_results(results) }}'

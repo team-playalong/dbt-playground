@@ -5,3 +5,8 @@ packages:
     version: ['>=1.0.0']
   - package: get-select/dbt_snowflake_monitoring
     version: 1.4.2
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.2.2
+  - package: elementary-data/elementary
+    version: 0.6.11
+    ## Docs: https://docs.elementary-data.com
